@@ -1,0 +1,140 @@
+body {
+    background-color: #030319;
+    overflow: clip;
+}
+
+h3 {
+    margin: 40px;
+}
+
+.timer {
+    color:white;
+}
+
+.body {
+    position: absolute;
+    background-color: #FF7715;
+    border: solid #FF4D15;
+    width: 1000px;
+    height: 750px;
+    border-width: 0 50px 0;
+    border-radius: 100px;
+    margin: 100px 400px;
+    overflow: visible;
+    animation: bodyZoom 1s 1s normal forwards;
+}
+
+.face {
+    position: absolute;
+    background-color: #FF7715;
+    border: solid #FF4D15;
+    width: 800px;
+    height: 800px;
+    border-width: 0 60px 0;
+    border-radius: 100px;
+    margin-top: -25px;
+    margin-left: 35px;
+    animation: faceZoom 1s 0.7s normal forwards;
+}
+
+.timer {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    top: 600px;
+    font-size: 50pt;
+    font-family: 'Inknut Antiqua';
+    color: #FF4D15;
+    stroke: #484848;
+    stroke-width: 1px;
+    opacity: 0;
+    animation: countDown 1s 1s normal forwards;
+}
+
+.mouth {
+    position: absolute;
+    background-color: #484848;
+    width: 300px;
+    height: 200px;
+    top: 500px;
+    left: 250px;
+    animation: mouthOpen 1s 1s normal forwards;
+}
+
+.eye {
+    position: absolute;
+    border-bottom: 100px solid #484848;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    animation: eyesMove 1s 1s normal forwards;
+    left: 400px;
+    top: 100px;
+}
+
+@keyframes bodyZoom {
+    0% {
+    }
+    
+    100% {
+        width: 98%;
+        height: 1100px;
+        margin-left: -35px;
+        margin-top: -45px;
+    }
+}
+
+@keyframes faceZoom {
+    0% {
+        position: relative;
+        margin-top: -65px;
+    }
+
+    33% {
+        height: 800px;
+        width: 800px;
+    }
+
+    100% {
+        position: relative;
+        margin: auto;
+        width: 85%;
+        height: 1100px;
+        margin-top: -50px;
+        border-width: 0 80px 0;
+    }
+}
+
+@keyframes countDown {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes mouthOpen {
+    0% {
+
+    }
+
+    100% {
+        width: 1400px;
+        height: 400px;
+        left: 100px;
+        background-color: #FFD90F;
+    }
+}
+
+@keyframes eyesMove {
+    0% {
+    }
+
+    100% {
+        border-bottom: 200px solid #FFD90F;
+        border-right: 150px solid transparent;
+        border-left: 150px solid transparent;
+        left: 600px;
+    }
+}
